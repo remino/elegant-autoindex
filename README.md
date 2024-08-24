@@ -1,7 +1,7 @@
 elegant-autoindex
 =================
 
-Stylist sortable autoindex template for nginx.
+Stylish sortable autoindex template for nginx.
 
 By Rémino Rem <https://remino.net/>
 
