@@ -106,6 +106,15 @@ th:nth-child(1) {
 	width: 99%;
 }
 
+td:nth-child(1) {
+	padding: 0;
+}
+
+td:nth-child(1) a {
+	display: block;
+	padding: var(--padding);
+}
+
 td:nth-child(2),
 td:nth-child(3),
 td:nth-child(4),
