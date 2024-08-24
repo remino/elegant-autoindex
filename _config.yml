@@ -13,7 +13,6 @@ defaults:
       layout: default
 
 exclude:
-  - README.md
   - LICENSE.txt
   - etc/
   - jeksite
