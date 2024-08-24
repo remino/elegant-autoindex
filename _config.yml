@@ -1,8 +1,8 @@
-title: jeksite
+title: elegant-autoindex
 description: >-
-  Plain and simple Jekyll site template ideal for GitHub Pages.
+  Stylish sortable autoindex template for nginx.
 
-baseurl: /jeksite
+baseurl: /elegant-autoindex
 domain: remino.github.io
 url: https://remino.github.io
 
