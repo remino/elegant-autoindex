@@ -3,9 +3,9 @@ elegant-autoindex
 
 Stylish sortable autoindex template for nginx.
 
-By Rémino Rem <https://remino.net/>. [ISC License](LICENSE.txt).
+By Rémino Rem <https://remino.net/> 
 
-[Site](https://remino.github.io/elegant-autoindex/) | [Code](https://github.com/remino/elegant-autoindex)
+[Site](https://remino.github.io/elegant-autoindex/) | [Code](https://github.com/remino/elegant-autoindex) | [License](LICENSE.txt)
 
 ## Description
 
