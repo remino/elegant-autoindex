@@ -101,6 +101,11 @@ th {
 	vertical-align: top;
 }
 
+td:nth-child(1),
+th:nth-child(1) {
+	width: 99%;
+}
+
 td:nth-child(2),
 td:nth-child(3),
 td:nth-child(4),
