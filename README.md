@@ -1,56 +1,38 @@
-jeksite
-=======
+elegant-autoindex
+=================
 
-Plain and simple [Jekyll](https://jekyllrb.com) site template ideal for [GitHub Pages](https://pages.github.com).
+Stylist sortable autoindex template for nginx.
 
-Also good for a quick-and-dirty sandbox static site similar to using [CodePen](https://codepen.io).
+By Rémino Rem <https://remino.net/>
 
-- [Usage](#usage)
-	- [Clone this repo locally and use it as a template](#clone-this-repo-locally-and-use-it-as-a-template)
-	- [Use this repo as a template on GitHub](#use-this-repo-as-a-template-on-github)
-	- [Install using Homebrew and generate a new site](#install-using-homebrew-and-generate-a-new-site)
-- [Help](#help)
-- [To Do](#to-do)
+[Site](https://remino.github.io/elegant-autoindex/) | [Code](https://github.com/remino/elegant-autoindex)
+
+## Description
+
+Includes an XSLT file to transform the default nginx autoindex, a CSS file to style the result, and a JavaScript file to make the table sortable.
 
 ## Usage
 
-There are a few ways to use _jeksite_:
-
-### Clone this repo locally and use it as a template
+First, clone the repo and link the files to the appropriate directories:
 
 ```sh
-git clone https://github.com/remino/jeksite.git newsite
-cd newsite
-asdf install # if you use asdf
-bundle install
-git remote set-url origin <url of your repo> # if you want to push to a new repo
-./jeksite # serve site using jekyll
+git clone https://github.com/remino/elegant-autoindex /opt/elegant-autoindex
+ln -s /etc/nginx/snippets/elegant-autoindex-files.conf /opt/elegant-autoindex/etc/nginx/snippets/elegant-autoindex-files.conf
+ln -s /etc/nginx/snippets/elegant-autoindex-enable.conf /opt/elegant-autoindex/etc/nginx/snippets/elegant-autoindex-enable.conf
+ln -s /var/lib/nginx/elegant-autoindex /opt/elegant-autoindex/var/lib/nginx/elegant-autoindex
 ```
 
-### Use this repo as a template on GitHub
+Then, include the `elegant-autoindex-enable.conf` snippet in your server configuration:
 
-https://github.com/remino/jeksite/generate
+```nginx
+server {
+  # Location with file listings:
+  location ~ /files/ {
+    # ...
+    include snippets/elegant-autoindex-enable.conf;
+    # ...
+  }
 
-### Install using Homebrew and generate a new site
-
-This requires [Homebrew](https://brew.sh) and works on macOS (and possibly Linux) only.
-
-```sh
-brew tap remino/remino
-brew install jeksite
-jeksite new newsite
-cd newsite
-./jeksite
+  include snippets/elegant-autoindex-files.conf;
+}
 ```
-
-## Help
-
-See `./jeksite -h` for more information on the command.
-
-## To Do
-
-- [ ] Ensure `Gemfile` is using `github-pages` if the site is for GitHub Pages. If not, use plain `jekyll`.
-- [ ] Update `_config.yml`, notable `baseurl`, `domain`, `url`, `title`, and `description`.
-- [ ] Update `README.md` by first deleting its content.
-- [ ] Update or remove `LICENSE.txt` if needed. (ISC licence by default.)
-- [ ] Delete content of `index.html`, `style.css`, and `script.js`.

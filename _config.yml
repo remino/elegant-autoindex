@@ -15,7 +15,9 @@ defaults:
 exclude:
   - README.md
   - LICENSE.txt
+  - etc/
   - jeksite
+  - var/
 
 include:
   - .htaccess
