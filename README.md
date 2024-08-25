@@ -3,11 +3,11 @@ elegant-autoindex
 
 Stylish sortable autoindex template for nginx.
 
-![Screenshot](screenshot.avif)
-
 By Rémino Rem <https://remino.net/> 
 
 [Site](https://remino.github.io/elegant-autoindex/) | [Code](https://github.com/remino/elegant-autoindex) | [License](LICENSE.txt)
+
+![Screenshot](screenshot.avif)
 
 ## Description
 
