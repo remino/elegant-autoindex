@@ -63,9 +63,11 @@
 						</xsl:for-each>
 					</tbody>
 				</table>
-				<footer>
-					<a href="https://github.com/remino/elegant-autoindex" target="_blank"><em>elegant-autoindex</em></a> by <a href="https://remino.net/" target="_blank">RÉMINO</a>
-				</footer>
+				<xsl:if test="$showAttribution != 'false'">
+					<footer>
+						<a href="https://github.com/remino/elegant-autoindex" target="_blank"><em>elegant-autoindex</em></a> by <a href="https://remino.net/" target="_blank">RÉMINO</a>
+					</footer>
+				</xsl:if>
 			</body>
 		</html>
 	</xsl:template>
